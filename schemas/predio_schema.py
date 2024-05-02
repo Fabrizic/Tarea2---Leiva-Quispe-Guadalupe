@@ -2,6 +2,8 @@ from utils.ma import ma
 from model.predio import Predio
 from marshmallow import fields
 from schemas.tipo_predio_schema import TipoPredioSchema
+from schemas.persona_schema import PersonaSchema
+from schemas.ubigeo_schema import UbigeoSchema
 
 class PredioSchema(ma.Schema):
     class Meta:
@@ -17,9 +19,13 @@ class PredioSchema(ma.Schema):
                   'id_persona',
                   'url_imagen',
                   'total_mdu',
-                  'tipo_predio')
+                  'tipo_predio',
+                  'ubigeo',
+                  'persona')
     
-    tipo_predio = ma.Nested(TipoPredioSchema)    
+    tipo_predio = ma.Nested(TipoPredioSchema)
+    ubigeo = ma.Nested(UbigeoSchema)
+    persona = ma.Nested(PersonaSchema)    
 
 predio_schema = PredioSchema()
 predios_schema = PredioSchema(many=True)

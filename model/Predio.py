@@ -1,5 +1,7 @@
 from utils.db import db
 from model.tipo_predio import TipoPredio
+from model.ubigeo import Ubigeo
+from model.persona import Persona
 
 class Predio(db.Model):
     __tablename__ = 'predio'
@@ -17,8 +19,8 @@ class Predio(db.Model):
 
 
     tipo_predio = db.relationship('TipoPredio', backref='predio')
-    #ubigeo = db.relationship('Ubigeo', backref='predio')
-    #personas = db.relationship('Persona', backref='predio')
+    ubigeo = db.relationship('Ubigeo', backref='predio')
+    persona = db.relationship('Persona', backref='predio')
 
     def __init__(self, id_predio, id_tipo_predio, descripcion, ruc, telefono, correo, direccion, idubigeo, id_persona, url_imagen, total_mdu):
         self.id_predio = id_predio
