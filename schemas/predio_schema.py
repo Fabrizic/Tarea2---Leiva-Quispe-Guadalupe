@@ -1,5 +1,5 @@
 from utils.ma import ma
-from model.predio import Predio
+from model.Predio import Predio
 from marshmallow import fields
 from schemas.tipo_predio_schema import TipoPredioSchema
 from schemas.persona_schema import PersonaSchema

@@ -1,5 +1,5 @@
 from utils.db import db
-from model.tipo_predio import TipoPredio
+from model.Tipo_predio import TipoPredio
 from model.ubigeo import Ubigeo
 from model.persona import Persona
 

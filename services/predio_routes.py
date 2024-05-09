@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, make_response
 from utils.db import db
-from model.predio import Predio
+from model.Predio import Predio
 from schemas.predio_schema import predio_schema, predios_schema
 
 predio_routes = Blueprint("predio_routes", __name__)
